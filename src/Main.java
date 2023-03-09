@@ -37,6 +37,12 @@ public class Main {
         System.out.println("Zsumowany wektor zapisano do pliku wynik.txt");
         writer.close();
     }
+    public static void printVector(Vector<Integer> v){
+        System.out.print("Zsumowany wektor: ");
+        for(int i=0;i<v.size();++i){
+            System.out.print(v.get(i)+" ");
+        }
+    }
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         Vector<Integer> v, v2, vOutput;
@@ -54,6 +60,7 @@ public class Main {
                 reader(v2,input);
                 vOutput = addVectors(v,v2);
                 saveVector(vOutput);
+                printVector(vOutput);
                 break;
             } catch (WektoryRoznejDlugosciException e){
                 System.out.println(e.getMessage());
