@@ -12,7 +12,7 @@ public class Main {
 
         while (tokenizer.hasMoreTokens()) {
             String token = tokenizer.nextToken();
-            if(token.matches("[1-9]+")){
+            if(token.matches("[0-9]+")){
                 v.add(Integer.parseInt(token));
             }
         }
